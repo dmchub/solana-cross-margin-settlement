@@ -1,0 +1,22 @@
+[package]
+name = "solana-cross-margin-settlement"
+version = "0.1.0"
+description = "Cross-margin settlement for Solana derivatives DEX"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solana_cross_margin_settlement"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+
+[dev-dependencies]
+anchor-lang = { version = "0.29.0", features = ["init-if-needed"] }
